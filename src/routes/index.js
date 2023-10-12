@@ -16,14 +16,14 @@ const routes =  {
 const router = async()=>{
   const header = null || document.getElementById('header');
   const content = null || document.getElementById('content');
-
+  
   header.innerHTML = await Header();
   console.log(getHash());
   console.log(resolveRoute(getHash()));
   let hash = getHash();
   let route = await resolveRoute(hash);
   let render  = routes[route] ? routes[route] : Error404; 
-  content.innerHTML = render();
+  content.innerHTML = await render();
 
 };
 
