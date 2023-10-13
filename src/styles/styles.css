@@ -8,6 +8,7 @@
 
 html{
   font-size: 6.25%;
+  font-family: sans-serif;
 }
 
 .Main {
@@ -72,6 +73,8 @@ a {
   
 }
 
+
+/* Character details */
 .Character-item {
   width: 200px;
 }
@@ -80,3 +83,46 @@ a {
   border: 3px solid black;
   border-radius: 30px;
 }
+
+
+
+.Characters-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.Characters-card {
+  font-size: 15rem;
+  min-width: 100px;
+}
+
+.Characters-card img {
+  width: 100%;
+  object-fit: contain;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.Characters-card h2 {
+  padding: 10px 0px;
+}
+
+.Characters-card h3 {
+  margin: 10px 0;
+}
+
+.Characters-card span {
+  font-weight: normal;
+}
+
+.Error404 h2 {
+  font-size: 20rem;
+  text-align: center;
+}
+
