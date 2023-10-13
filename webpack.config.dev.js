@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports= {
@@ -10,7 +9,7 @@ module.exports= {
     filename: 'bundle.js',
 
   },
-  mode: 'production',
+  mode: 'development',
   resolve: {
     extensions: ['.js'],
     alias:{
@@ -42,17 +41,9 @@ module.exports= {
       inject: true,
       template: './public/index.html',
       filename: 'index.html'
-    }),
-
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: './src/styles/styles.css',
-          to: ''
-        }
-      ]
     })
-  
-  ]
 
+
+    
+  ],
 }
